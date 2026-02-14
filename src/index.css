@@ -374,9 +374,9 @@ a {
 
 .container-custom {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding-inline: 1.5rem;
+  padding-inline: clamp(1rem, 8vw, 11.25rem);
 }
 
 .section-padding {
@@ -700,7 +700,7 @@ a {
 
 @media (max-width: 768px) {
   .container-custom {
-    padding-inline: 1rem;
+    padding-inline: 1.25rem;
   }
 }
 

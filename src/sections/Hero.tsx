@@ -50,14 +50,18 @@ export function Hero({ onGetStarted }: HeroProps) {
           </span>
 
           <h1 className="animate-fade-in-up stagger-1 mt-6 font-display text-4xl leading-tight text-strong sm:text-5xl md:text-6xl">
-            Build and ship{' '}
-            <span className="text-gradient-brand">Spring Boot systems</span>{' '}
-            with a roadmap inspired by real teams
+            From Tutorials to Production:{' '}
+            <span className="text-gradient-brand">
+              <br />
+              Ship
+              Real Spring Boot Systems
+            </span>,{' '}
+            Faster.
           </h1>
 
           <p className="animate-fade-in-up stagger-2 section-copy mx-auto mt-6 max-w-2xl text-lg">
-            Learn through a practical roadmap with curated resources, milestone goals,
-            and projects that map directly to real backend engineering work.
+            Follow high-signal milestones, build portfolio-grade backend projects,
+            and finish each phase with work you can demo, deploy, and defend in interviews.
           </p>
 
           <div className="animate-fade-in-up stagger-3 mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">

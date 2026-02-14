@@ -1,73 +1,80 @@
-# React + TypeScript + Vite
+# Spring Boot Roadmap UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interactive React UI for a structured Spring Boot learning roadmap with curated free resources, stage-based progression, and local progress tracking.
 
-Currently, two official plugins are available:
+## What this project includes
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Landing page with Hero, Features, Roadmap Preview, and FAQ sections
+- Dedicated `/roadmap` page with stage and type filters (`beginner`, `intermediate`, `advanced`; `core`, `optional`)
+- Topic search across titles and descriptions
+- Progress checkboxes and starred topics
+- Expand/collapse all modules
+- Persistent view state and progress in `localStorage`
+- Light and dark theme toggle
+- Responsive layout for desktop and mobile
 
-## React Compiler
+## Tech stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19 + TypeScript
+- Vite 7
+- Tailwind CSS 3
+- React Router DOM 6
+- Radix UI primitives
+- Lucide icons
+- `next-themes` for theme switching
+- `@vercel/analytics` for client analytics
 
-## Expanding the ESLint configuration
+## Project structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```text
+src/
+  components/      Reusable UI and navigation components
+  data/            Roadmap dataset and helper functions
+  hooks/           Shared hooks
+  pages/           Route-level pages (Roadmap page)
+  sections/        Landing page sections
+  static/          Static assets (logo)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js 20+ (recommended for Vite 7)
+- npm
+
+### Install
+
+```bash
+npm install
 ```
+
+### Run locally
+
+```bash
+npm run dev
+```
+
+Open `http://localhost:5173`.
+
+## Available scripts
+
+- `npm run dev` - start development server
+- `npm run build` - type-check and build for production
+- `npm run preview` - preview production build locally
+- `npm run lint` - run ESLint
+
+## Data and persistence
+
+- Roadmap content lives in `src/data/roadmap.ts`.
+- Progress and view preferences are stored in `localStorage` keys: `autoconfig-site-progress`, `autoconfig-site-starred`, `autoconfig-site-roadmap-view`.
+
+## Build output and deployment
+
+- Production files are generated in `dist/`.
+- Vite `base` is set to `./` in `vite.config.ts`, so the build can be hosted on static file hosting with relative asset paths.
+
+## Notes
+
+- This repository is frontend-only.
+- The roadmap content is curated and can be updated by editing `src/data/roadmap.ts`.

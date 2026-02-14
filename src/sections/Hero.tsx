@@ -1,5 +1,7 @@
 import { ArrowRight, BookOpen, Code2, Rocket } from 'lucide-react';
 import { getTotalStages, getTotalTopics, getTotalWeeks } from '../data/roadmap';
+import roadmapPreviewDark from '../static/thum_black.png';
+import roadmapPreviewLight from '../static/thum_white.png';
 
 interface HeroProps {
   onGetStarted: () => void;
@@ -74,7 +76,24 @@ export function Hero({ onGetStarted }: HeroProps) {
             </button>
           </div>
 
-          <div className="animate-fade-in-up stagger-4 mt-14 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <div className="animate-fade-in-up stagger-4 mx-auto mt-10 w-full max-w-5xl">
+            <div className="overflow-hidden rounded-2xl border border-[color:var(--line-soft)] bg-[var(--bg-panel)] shadow-[var(--shadow-md)]">
+              <img
+                src={roadmapPreviewLight}
+                alt="Roadmap interface preview in light mode"
+                className="block w-full object-cover dark:hidden"
+                loading="lazy"
+              />
+              <img
+                src={roadmapPreviewDark}
+                alt="Roadmap interface preview in dark mode"
+                className="hidden w-full object-cover dark:block"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div className="animate-fade-in-up stagger-5 mt-14 grid grid-cols-1 gap-4 sm:grid-cols-3">
             {stats.map((stat) => (
               <article
                 key={stat.label}

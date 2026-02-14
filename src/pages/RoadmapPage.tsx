@@ -294,7 +294,7 @@ export function RoadmapPage() {
   };
 
   return (
-    <div className="pb-16">
+    <div className="pb-16 pt-8 md:pt-10">
       <div className="container-custom">
         <header className="mb-8">
           <span className="kicker">Interactive Roadmap</span>

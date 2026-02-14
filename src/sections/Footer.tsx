@@ -109,7 +109,7 @@ export function Footer() {
             the Java community
           </p>
           <p className="text-sm text-muted">
-            (c) {currentYear} autoconfig.site. Open source under Apache 2.0.
+            {currentYear} autoconfig.site.
           </p>
         </div>
       </div>

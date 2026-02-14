@@ -5,7 +5,7 @@ import { SectionIntro } from '../components/SectionIntro';
 const faqs = [
   {
     question: 'Is this roadmap completely free?',
-    answer: 'Yes, this roadmap is 100% free and open source. All the resources linked are also freely available. The project is under Apache 2.0 license, so you can use it however you want.',
+    answer: 'Yes, this roadmap is 100% free and open source. All the resources linked are also freely available.',
   },
   {
     question: 'How long does it take to complete the roadmap?',
@@ -16,16 +16,12 @@ const faqs = [
     answer: 'Basic programming knowledge is helpful but not required. The roadmap starts with Java fundamentals and assumes no prior Java experience. If you are completely new to programming, you might need extra time in the early stages.',
   },
   {
-    question: 'What projects will I build?',
-    answer: 'You will build several projects including: a Student Management System (Stage 1 capstone), an E-Commerce Backend with JWT auth and payments (Stage 2), a Real-time Chat Application (Stage 2 advanced), and a Microservices-based E-Commerce Platform (Stage 3).',
-  },
-  {
     question: 'Can I skip the optional topics?',
     answer: 'Optional topics are marked as OPTIONAL but they are not meant to be skipped entirely. They provide deeper knowledge that will make you a better developer. If you are short on time, do them later, but try to complete them eventually.',
   },
   {
     question: 'Is this enough to get a job as a Java developer?',
-    answer: 'This roadmap covers all the essential skills needed for a Spring Boot developer role. Combined with the projects you will build, it provides a strong foundation. However, job readiness also depends on problem-solving skills, which you should practice separately on platforms like LeetCode.',
+    answer: 'This roadmap covers all the essential skills needed for a Spring Boot developer role. Combined with the projects you will build, it provides a strong foundation. However, job readiness also depends on problem-solving skills',
   },
   {
     question: 'How is this different from other Spring Boot courses?',

@@ -1,5 +1,5 @@
 import { ArrowRight, Code2, Database, Server } from 'lucide-react';
-import { getTopicsByLevel } from '../data/roadmap';
+import { getTopicsByLevel, getTotalStages } from '../data/roadmap';
 import { SectionIntro } from '../components/SectionIntro';
 
 const levels = [
@@ -40,12 +40,14 @@ interface RoadmapPreviewProps {
 }
 
 export function RoadmapPreview({ onViewRoadmap }: RoadmapPreviewProps) {
+  const totalStages = getTotalStages();
+
   return (
     <section className="section-padding relative">
       <div className="container-custom relative">
         <SectionIntro
           kicker="Learning Path"
-          title="Three stages of mastery"
+          title={`${totalStages} ${totalStages === 1 ? 'stage' : 'stages'} of mastery`}
           description="Move from core fundamentals to distributed systems through a phased path that keeps every step focused and measurable."
         />
 

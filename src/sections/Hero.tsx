@@ -1,24 +1,29 @@
 import { ArrowRight, BookOpen, Code2, Rocket } from 'lucide-react';
+import { getTotalStages, getTotalTopics, getTotalWeeks } from '../data/roadmap';
 
 interface HeroProps {
   onGetStarted: () => void;
 }
 
 export function Hero({ onGetStarted }: HeroProps) {
+  const totalStages = getTotalStages();
+  const totalTopics = getTotalTopics();
+  const totalWeeks = getTotalWeeks();
+
   const stats = [
     {
       icon: BookOpen,
-      label: '3 stages',
+      label: `${totalStages} ${totalStages === 1 ? 'stage' : 'stages'}`,
       description: 'Progress through clear learning stages',
     },
     {
       icon: Code2,
-      label: '100+ topics',
+      label: `${totalTopics} ${totalTopics === 1 ? 'topic' : 'topics'}`,
       description: 'Hands-on backend concepts and projects',
     },
     {
       icon: Rocket,
-      label: 'Job-ready',
+      label: `${totalWeeks} ${totalWeeks === 1 ? 'module' : 'modules'}`,
       description: 'From Java basics to microservices delivery',
     },
   ];

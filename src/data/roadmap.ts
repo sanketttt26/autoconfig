@@ -465,8 +465,8 @@ export const roadmapData: Week[] = [
             url: "https://www.baeldung.com/jpa-hibernate-associations",
           },
           {
-            name: "Entity Mapping (GeeksforGeeks)",
-            url: "https://www.geeksforgeeks.org/jpa-mapping-annotations/",
+            name: "Entity Mapping (Oracle)",
+            url: "https://docs.oracle.com/cd/B10002_01/generic.903/a97677/ormap.htm",
           },
         ],
       },
@@ -489,7 +489,7 @@ export const roadmapData: Week[] = [
           { name: "Project Setup Guide", url: "https://start.spring.io" },
           {
             name: "Spring Boot Project Structure",
-            url: "https://www.baeldung.com/spring-boot-project-structure",
+            url: "https://docs.spring.io/spring-boot/reference/using/structuring-your-code.html",
           },
         ],
       },
@@ -500,7 +500,7 @@ export const roadmapData: Week[] = [
         resources: [
           {
             name: "Layered Architecture",
-            url: "https://www.baeldung.com/spring-boot-layers",
+            url: "https://kamilmazurek.pl/layered-architecture-template",
           },
           { name: "Best Practices", url: "https://spring.io/guides" },
         ],
@@ -511,8 +511,8 @@ export const roadmapData: Week[] = [
         description: "Using Postman to test endpoints",
         resources: [
           {
-            name: "Postman Tutorial",
-            url: "https://www.youtube.com/watch?v=VywxIQ2ZXw4",
+            name: "What is postman?",
+            url: "https://youtu.be/A36VQFdIAkI",
           },
           { name: "API Testing", url: "https://learning.postman.com" },
         ],
@@ -539,7 +539,7 @@ export const roadmapData: Week[] = [
           },
           {
             name: "IoC (Telusko)",
-            url: "https://www.youtube.com/watch?v=EPv9-cHEmQw",
+            url: "https://youtu.be/5cRaQqQb14Q",
           },
         ],
       },
@@ -566,7 +566,7 @@ export const roadmapData: Week[] = [
           },
           {
             name: "AOP Tutorial",
-            url: "https://www.youtube.com/watch?v=QdyLsX0nChw",
+            url: "https://youtu.be/Ft29HgsePfQ",
           },
         ],
       },
@@ -607,7 +607,7 @@ export const roadmapData: Week[] = [
           },
           {
             name: "Global Exception Handling",
-            url: "https://www.baeldung.com/exception-handling-spring-rest-api",
+            url: "https://dev.to/tienbku/global-exception-handler-in-spring-boot-3mbp",
           },
         ],
       },
@@ -643,8 +643,8 @@ export const roadmapData: Week[] = [
         resources: [
           { name: "JUnit 5 Tutorial", url: "https://www.baeldung.com/junit-5" },
           {
-            name: "Spring Boot Testing",
-            url: "https://docs.spring.io/spring-boot/reference/testing/index.html",
+            name: "Write unit tests using Junit",
+            url: "https://youtu.be/vZm0lHciFsQ",
           },
         ],
       },
@@ -658,8 +658,8 @@ export const roadmapData: Week[] = [
             url: "https://www.baeldung.com/mockito-series",
           },
           {
-            name: "Unit Testing (Teddy)",
-            url: "https://www.youtube.com/watch?v=vZm0lHciFsQ",
+            name: "Mockito + JUnit",
+            url: "https://youtu.be/XVFqOFKGeGM",
           },
         ],
       },
@@ -672,7 +672,6 @@ export const roadmapData: Week[] = [
             name: "Integration Testing (Baeldung)",
             url: "https://www.baeldung.com/spring-boot-testing",
           },
-          { name: "Testcontainers", url: "https://www.testcontainers.org" },
         ],
       },
     ],
@@ -696,7 +695,7 @@ export const roadmapData: Week[] = [
           },
           {
             name: "Filter Tutorial",
-            url: "https://www.youtube.com/watch?v=4l8QpJA9q9Y",
+            url: "https://youtu.be/1KuyklLoU9U",
           },
         ],
       },
@@ -724,7 +723,10 @@ export const roadmapData: Week[] = [
             name: "Lombok Tutorial",
             url: "https://www.baeldung.com/intro-to-project-lombok",
           },
-          { name: "Lombok Docs", url: "https://projectlombok.org" },
+          {
+            name: "Lombok Video Tutorial",
+            url: "https://youtu.be/oHjGO01Ipnw",
+          },
         ],
       },
     ],
@@ -762,23 +764,8 @@ export const roadmapData: Week[] = [
             url: "https://www.baeldung.com/spring-file-upload",
           },
           {
-            name: "Multipart Tutorial",
-            url: "https://www.youtube.com/watch?v=NyOEdniG63A",
-          },
-        ],
-      },
-      {
-        id: "w15-t3",
-        title: "Filtering and Searching",
-        description: "Specification API and dynamic queries",
-        resources: [
-          {
-            name: "JPA Specifications",
-            url: "https://www.baeldung.com/rest-api-search-language-spring-data-specifications",
-          },
-          {
-            name: "QueryDSL",
-            url: "https://www.baeldung.com/querydsl-with-jpa-tutorial",
+            name: "File Upload Tutorial",
+            url: "https://youtube.com/playlist?list=PLR2yPNIFMlL9uyIUoF1CFVMlfclJKPct9&si=E3qHaHkVjJRXb3q8",
           },
         ],
       },
@@ -819,7 +806,7 @@ export const roadmapData: Week[] = [
           },
           {
             name: "Security Tutorial",
-            url: "https://www.youtube.com/watch?v=bnAuqSgmTyc",
+            url: "https://youtu.be/oeni_9g7too",
           },
         ],
       },
@@ -833,8 +820,8 @@ export const roadmapData: Week[] = [
             url: "https://www.baeldung.com/role-and-privilege-for-spring-security-registration",
           },
           {
-            name: "Method Security",
-            url: "https://docs.spring.io/spring-security/reference/servlet/authorization/method-security.html",
+            name: "RBAC Video Tutorial",
+            url: "https://youtu.be/mq5oUXcAXL4",
           },
         ],
       },
@@ -856,7 +843,7 @@ export const roadmapData: Week[] = [
           { name: "JWT.io", url: "https://jwt.io" },
           {
             name: "JWT Tutorial",
-            url: "https://www.youtube.com/watch?v=KxqlJblhzfI",
+            url: "https://youtu.be/CELcrLHQmZs",
           },
         ],
       },
@@ -869,10 +856,6 @@ export const roadmapData: Week[] = [
             name: "JWT with Spring (Baeldung)",
             url: "https://www.baeldung.com/spring-security-oauth-jwt",
           },
-          {
-            name: "JWT Implementation",
-            url: "https://www.youtube.com/watch?v=KxqlJblhzfI",
-          },
         ],
       },
       {
@@ -882,11 +865,7 @@ export const roadmapData: Week[] = [
         resources: [
           {
             name: "Refresh Tokens",
-            url: "https://www.baeldung.com/spring-security-refresh-token",
-          },
-          {
-            name: "Token Best Practices",
-            url: "https://auth0.com/learn/refresh-tokens",
+            url: "https://youtu.be/-Z57Ss_uiuc",
           },
         ],
       },
@@ -908,7 +887,7 @@ export const roadmapData: Week[] = [
           { name: "SQL Joins (Anton)", url: "https://youtu.be/Yh4CrPHVBdE" },
           {
             name: "Window Functions",
-            url: "https://www.youtube.com/watch?v=zfhu0uo1Fgw",
+            url: "https://youtu.be/rIcB4zMYMas",
           },
         ],
       },
@@ -934,11 +913,11 @@ export const roadmapData: Week[] = [
         resources: [
           {
             name: "Transactions (Baeldung)",
-            url: "https://www.baeldung.com/spring-transactional-propagation-isolation",
+            url: "https://youtu.be/wHUOeXbZCYA",
           },
           {
             name: "Transaction Management",
-            url: "https://docs.spring.io/spring-framework/reference/data-access/transaction.html",
+            url: "https://www.ibm.com/think/topics/transaction-management",
           },
         ],
       },
@@ -959,10 +938,9 @@ export const roadmapData: Week[] = [
         description: "Design patterns, entities, and relationships",
         resources: [
           {
-            name: "Domain-Driven Design",
-            url: "https://www.baeldung.com/spring-boot-domain-driven-design",
+            name: "Project Structure",
+            url: "https://stackoverflow.com/questions/40902280/what-is-the-recommended-project-structure-for-spring-boot-rest-projects",
           },
-          { name: "Project Structure", url: "https://spring.io/guides" },
         ],
       },
       {
@@ -987,8 +965,8 @@ export const roadmapData: Week[] = [
         resources: [
           { name: "REST API Design", url: "https://restfulapi.net" },
           {
-            name: "Service Layer Pattern",
-            url: "https://www.baeldung.com/spring-service-layer",
+            name: "Simple E-Commerce Backend",
+            url: "https://www.baeldung.com/spring-angular-ecommerce",
           },
         ],
       },
@@ -1026,21 +1004,6 @@ export const roadmapData: Week[] = [
           },
         ],
       },
-      {
-        id: "w20-t3",
-        title: "When to Use NoSQL",
-        description: "SQL vs NoSQL decision making",
-        resources: [
-          {
-            name: "SQL vs NoSQL",
-            url: "https://www.youtube.com/watch?v=ZS_kXvOeQ5Y",
-          },
-          {
-            name: "Database Selection",
-            url: "https://www.baeldung.com/sql-vs-nosql",
-          },
-        ],
-      },
     ],
   },
   {
@@ -1061,28 +1024,13 @@ export const roadmapData: Week[] = [
             url: "https://www.baeldung.com/spring-websockets",
           },
           {
-            name: "WebSocket Tutorial",
-            url: "https://www.youtube.com/watch?v=TywlS9iAZCM",
+            name: "WebSocket Basics",
+            url: "https://youtu.be/1BfCnjr_Vjg",
           },
         ],
       },
       {
         id: "w21-t2",
-        title: "STOMP Messaging",
-        description: "Simple Text Oriented Messaging Protocol",
-        resources: [
-          {
-            name: "STOMP with Spring",
-            url: "https://docs.spring.io/spring-framework/reference/web/websocket/stomp.html",
-          },
-          {
-            name: "Spring Messaging",
-            url: "https://www.baeldung.com/spring-websockets-send-message-to-user",
-          },
-        ],
-      },
-      {
-        id: "w21-t3",
         title: "Building a Chat Application",
         description: "Real-time messaging with WebSockets",
         resources: [
@@ -1092,62 +1040,7 @@ export const roadmapData: Week[] = [
           },
           {
             name: "Spring Boot Chat",
-            url: "https://github.com/salmar/spring-websocket-chat",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: "week22",
-    weekNumber: 22,
-    title: "Reactive Programming with Spring WebFlux",
-    level: "intermediate",
-    type: "optional",
-    description: "Non-blocking I/O and reactive streams.",
-    topics: [
-      {
-        id: "w22-t1",
-        title: "Reactive Programming Basics",
-        description: "Mono, Flux, and reactive streams",
-        resources: [
-          {
-            name: "WebFlux Docs",
-            url: "https://docs.spring.io/spring-framework/reference/web/webflux.html",
-          },
-          {
-            name: "Reactive Spring",
-            url: "https://www.youtube.com/watch?v=1KpyqvzQ3dw",
-          },
-        ],
-      },
-      {
-        id: "w22-t2",
-        title: "Spring WebFlux",
-        description: "Building reactive APIs",
-        resources: [
-          {
-            name: "WebFlux Tutorial",
-            url: "https://www.baeldung.com/spring-webflux",
-          },
-          {
-            name: "Reactive CRUD",
-            url: "https://www.youtube.com/watch?v=1KpyqvzQ3dw",
-          },
-        ],
-      },
-      {
-        id: "w22-t3",
-        title: "R2DBC",
-        description: "Reactive database connectivity",
-        resources: [
-          {
-            name: "R2DBC Guide",
-            url: "https://spring.io/projects/spring-data-r2dbc",
-          },
-          {
-            name: "Reactive Data",
-            url: "https://www.baeldung.com/spring-data-r2dbc",
+            url: "https://medium.com/@satviknema/real-time-chat-application-using-spring-web-sockets-and-stompjs-0d286696e2b0",
           },
         ],
       },
@@ -1223,96 +1116,7 @@ export const roadmapData: Week[] = [
         resources: [
           {
             name: "Spring Email",
-            url: "https://docs.spring.io/spring-framework/reference/integration/email.html",
-          },
-          {
-            name: "Email Tutorial",
-            url: "https://www.baeldung.com/spring-email",
-          },
-        ],
-      },
-      {
-        id: "w24-t2",
-        title: "Gmail SMTP Setup",
-        description: "App passwords and security",
-        resources: [
-          {
-            name: "Gmail SMTP",
-            url: "https://support.google.com/accounts/answer/185833",
-          },
-          {
-            name: "Spring Mail",
-            url: "https://www.youtube.com/watch?v=ugIUObN9dhA",
-          },
-        ],
-      },
-      {
-        id: "w24-t3",
-        title: "SMS with Twilio",
-        description: "SMS integration and verification",
-        resources: [
-          {
-            name: "Twilio Java",
-            url: "https://www.twilio.com/docs/libraries/java",
-          },
-          {
-            name: "SMS Tutorial",
-            url: "https://www.youtube.com/watch?v=9lX5qO5d8V0",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: "week25",
-    weekNumber: 25,
-    title: "Real-time Chat Application Project",
-    level: "intermediate",
-    type: "core",
-    description: "Build a complete chat app with WebSockets and notifications.",
-    topics: [
-      {
-        id: "w25-t1",
-        title: "Chat Architecture",
-        description: "Designing the chat system",
-        resources: [
-          {
-            name: "WebSocket Architecture",
-            url: "https://docs.spring.io/spring-framework/reference/web/websocket.html",
-          },
-          {
-            name: "Chat Design Patterns",
-            url: "https://systemdesignprimer.com",
-          },
-        ],
-      },
-      {
-        id: "w25-t2",
-        title: "Message Persistence",
-        description: "Storing and retrieving chat history",
-        resources: [
-          {
-            name: "MongoDB for Chat",
-            url: "https://www.mongodb.com/solutions/use-cases/real-time-analytics",
-          },
-          {
-            name: "Message Queue",
-            url: "https://www.baeldung.com/spring-amqp",
-          },
-        ],
-      },
-      {
-        id: "w25-t3",
-        title: "Push Notifications",
-        description: "Firebase Cloud Messaging integration",
-        resources: [
-          {
-            name: "FCM Docs",
-            url: "https://firebase.google.com/docs/cloud-messaging",
-          },
-          {
-            name: "Push Notifications",
-            url: "https://www.youtube.com/watch?v=9lX5qO5d8V0",
+            url: "https://medium.com/@AlexanderObregon/sending-emails-from-a-spring-boot-application-3cba9b051dbd",
           },
         ],
       },
@@ -1333,33 +1137,28 @@ export const roadmapData: Week[] = [
         description: "Payment intents, customers, and charges",
         resources: [
           { name: "Stripe Docs", url: "https://stripe.com/docs" },
-          { name: "Stripe Java", url: "https://stripe.com/docs/api" },
+          { name: "Stripe Spring Boot", url: "https://youtu.be/BczS-wbxgp4" },
         ],
       },
       {
         id: "w26-t2",
-        title: "Stripe Integration",
-        description: "Spring Boot and Stripe API",
+        title: "Razorpay Integration",
+        description: "Spring Boot and Razorpay API",
         resources: [
           {
-            name: "Stripe Spring",
-            url: "https://www.youtube.com/watch?v=BczS-wbxgp4",
-          },
-          {
-            name: "Payment Tutorial",
-            url: "https://www.baeldung.com/java-stripe-api",
+            name: "Razorpay Spring",
+            url: "https://youtu.be/AVWT23zKWaE",
           },
         ],
       },
       {
         id: "w26-t3",
         title: "Webhooks",
-        description: "Handling Stripe events",
+        description: "Basics of webhooks",
         resources: [
-          { name: "Stripe Webhooks", url: "https://stripe.com/docs/webhooks" },
           {
-            name: "Webhook Security",
-            url: "https://stripe.com/docs/webhooks/signatures",
+            name: "Webhooks",
+            url: "https://hookdeck.com/webhooks/guides/what-are-webhooks-how-they-work",
           },
         ],
       },
@@ -1391,12 +1190,8 @@ export const roadmapData: Week[] = [
         description: "GraphQL controllers and data fetchers",
         resources: [
           {
-            name: "Spring GraphQL",
-            url: "https://docs.spring.io/spring-graphql/reference/",
-          },
-          {
-            name: "GraphQL Tutorial",
-            url: "https://www.youtube.com/watch?v=2XmpTjSzvyc",
+            name: "Spring X GraphQL",
+            url: "https://youtu.be/uNB2N_w_ypo",
           },
         ],
       },
@@ -1406,12 +1201,8 @@ export const roadmapData: Week[] = [
         description: "Subscriptions, batch loading, and security",
         resources: [
           {
-            name: "GraphQL Subscriptions",
-            url: "https://www.baeldung.com/spring-graphql-subscriptions",
-          },
-          {
-            name: "DataLoader",
-            url: "https://www.baeldung.com/spring-graphql-dataloader",
+            name: "GraphQL Complete Playlist",
+            url: "https://youtube.com/playlist?list=PLpPqplz6dKxXICtNgHY1tiCPau_AwWAJU&si=JHUUAk_aN7JQUPwg",
           },
         ],
       },
@@ -1434,10 +1225,6 @@ export const roadmapData: Week[] = [
             name: "Scheduling Docs",
             url: "https://docs.spring.io/spring-framework/reference/integration/scheduling.html",
           },
-          {
-            name: "Cron Tutorial",
-            url: "https://www.baeldung.com/spring-scheduled-tasks",
-          },
         ],
       },
       {
@@ -1451,7 +1238,7 @@ export const roadmapData: Week[] = [
           },
           {
             name: "Batch Tutorial",
-            url: "https://www.baeldung.com/spring-batch-start",
+            url: "https://medium.com/@elouadinouhaila566/understanding-spring-batch-a-comprehensive-guide-393904ac401c",
           },
         ],
       },
@@ -1463,10 +1250,6 @@ export const roadmapData: Week[] = [
           {
             name: "Async Spring",
             url: "https://www.baeldung.com/spring-async",
-          },
-          {
-            name: "CompletableFuture",
-            url: "https://www.baeldung.com/java-completablefuture",
           },
         ],
       },
@@ -1481,47 +1264,17 @@ export const roadmapData: Week[] = [
     description: "Firebase services for mobile and web backends.",
     topics: [
       {
-        id: "w29-t1",
-        title: "Firebase Admin SDK",
-        description: "Setup and configuration",
-        resources: [
-          {
-            name: "Firebase Admin",
-            url: "https://firebase.google.com/docs/admin/setup",
-          },
-          {
-            name: "Firebase Java",
-            url: "https://firebase.google.com/docs/reference/admin/java/reference/com/google/firebase/FirebaseApp",
-          },
-        ],
-      },
-      {
-        id: "w29-t2",
-        title: "Firebase Auth",
-        description: "Token verification and user management",
-        resources: [
-          {
-            name: "Firebase Auth",
-            url: "https://firebase.google.com/docs/auth/admin/verify-id-tokens",
-          },
-          {
-            name: "Auth Tutorial",
-            url: "https://www.youtube.com/watch?v=9lX5qO5d8V0",
-          },
-        ],
-      },
-      {
         id: "w29-t3",
-        title: "Firebase Services",
-        description: "Firestore, Storage, and Cloud Messaging",
+        title: "Firebase",
+        description: "",
         resources: [
           {
-            name: "Firestore",
-            url: "https://firebase.google.com/docs/firestore",
+            name: "Spring Boot + Firebase",
+            url: "https://dev.to/priya01/spring-boot-meets-firebase-my-journey-of-building-a-file-upload-system-4m3i",
           },
           {
-            name: "Cloud Storage",
-            url: "https://firebase.google.com/docs/storage",
+            name: "Video Tutorial",
+            url: "https://youtu.be/9EodqjkZytc",
           },
         ],
       },
@@ -1545,23 +1298,8 @@ export const roadmapData: Week[] = [
             url: "https://docs.spring.io/spring-framework/reference/data-access/jdbc.html",
           },
           {
-            name: "JdbcTemplate",
-            url: "https://www.baeldung.com/spring-jdbc-jdbctemplate",
-          },
-        ],
-      },
-      {
-        id: "w30-t2",
-        title: "Flyway Migrations",
-        description: "Database versioning and migrations",
-        resources: [
-          {
-            name: "Flyway Docs",
-            url: "https://documentation.red-gate.com/flyway",
-          },
-          {
-            name: "Flyway Spring",
-            url: "https://www.baeldung.com/database-migrations-with-flyway",
+            name: "JDBC Tutorial",
+            url: "https://docs.oracle.com/javase/tutorial/jdbc/basics/index.html",
           },
         ],
       },
@@ -1572,8 +1310,8 @@ export const roadmapData: Week[] = [
         resources: [
           { name: "JPA Indexes", url: "https://www.baeldung.com/jpa-indexes" },
           {
-            name: "Query Optimization",
-            url: "https://www.youtube.com/watch?v=HubezKb5Xd4",
+            name: "How indexes work",
+            url: "https://www.youtube.com/watch?v=eQ3eNd5WbH8",
           },
         ],
       },
@@ -1598,37 +1336,7 @@ export const roadmapData: Week[] = [
           },
           {
             name: "Spring Data Aggregation",
-            url: "https://www.baeldung.com/spring-data-mongodb-aggregations",
-          },
-        ],
-      },
-      {
-        id: "w31-t2",
-        title: "MongoDB Indexes",
-        description: "Index types and optimization",
-        resources: [
-          {
-            name: "MongoDB Indexes",
-            url: "https://www.mongodb.com/docs/manual/indexes/",
-          },
-          {
-            name: "Index Tutorial",
-            url: "https://www.youtube.com/watch?v=D14wWW9EZxY",
-          },
-        ],
-      },
-      {
-        id: "w31-t3",
-        title: "MongoDB Transactions",
-        description: "Multi-document ACID transactions",
-        resources: [
-          {
-            name: "Transactions",
-            url: "https://www.mongodb.com/docs/manual/core/transactions/",
-          },
-          {
-            name: "Spring Transactions",
-            url: "https://docs.spring.io/spring-data/mongodb/reference/mongodb/transactions.html",
+            url: "https://www.baeldung.com/spring-data-mongodb-projections-aggregations",
           },
         ],
       },
@@ -1649,8 +1357,8 @@ export const roadmapData: Week[] = [
         resources: [
           { name: "Docker Docs", url: "https://docs.docker.com" },
           {
-            name: "Docker in 100 Seconds",
-            url: "https://www.youtube.com/watch?v=Gjnup-PuquQ",
+            name: "Docker for beginners ",
+            url: "https://youtu.be/17Bl31rlnRM",
           },
         ],
       },
@@ -1660,24 +1368,8 @@ export const roadmapData: Week[] = [
         description: "Multi-stage builds and optimization",
         resources: [
           {
-            name: "Spring Boot Docker",
-            url: "https://spring.io/guides/gs/spring-boot-docker",
-          },
-          {
-            name: "Docker Best Practices",
-            url: "https://www.baeldung.com/dockerizing-spring-boot-application",
-          },
-        ],
-      },
-      {
-        id: "w32-t3",
-        title: "Docker Compose",
-        description: "Multi-container applications",
-        resources: [
-          { name: "Compose Docs", url: "https://docs.docker.com/compose/" },
-          {
-            name: "Spring Compose",
-            url: "https://www.baeldung.com/docker-compose-support-spring-boot",
+            name: "Docker for Java Developer",
+            url: "https://youtu.be/lpKwgOpxpqg",
           },
         ],
       },
@@ -1698,35 +1390,8 @@ export const roadmapData: Week[] = [
         resources: [
           { name: "K8s Docs", url: "https://kubernetes.io/docs/home/" },
           {
-            name: "K8s in 5 mins",
-            url: "https://www.youtube.com/watch?v=PH-2FfFD2PU",
-          },
-        ],
-      },
-      {
-        id: "w33-t2",
-        title: "Deploying to K8s",
-        description: "Manifests and kubectl commands",
-        resources: [
-          {
-            name: "Spring on K8s",
-            url: "https://spring.io/guides/gs/spring-boot-kubernetes",
-          },
-          {
-            name: "K8s Tutorial",
-            url: "https://www.baeldung.com/spring-boot-kubernetes",
-          },
-        ],
-      },
-      {
-        id: "w33-t3",
-        title: "Helm Charts",
-        description: "Package management for K8s",
-        resources: [
-          { name: "Helm Docs", url: "https://helm.sh/docs/" },
-          {
-            name: "Helm Tutorial",
-            url: "https://www.youtube.com/watch?v=-ykwb1d0DXU",
+            name: "Learn Kubernetes",
+            url: "https://youtu.be/d6WC5n9G_sM",
           },
         ],
       },
@@ -1749,10 +1414,6 @@ export const roadmapData: Week[] = [
             name: "Kafka Docs",
             url: "https://kafka.apache.org/documentation/",
           },
-          {
-            name: "Kafka Tutorial",
-            url: "https://www.youtube.com/watch?v=Ch5VhJzaoaI",
-          },
         ],
       },
       {
@@ -1762,11 +1423,7 @@ export const roadmapData: Week[] = [
         resources: [
           {
             name: "Spring Kafka",
-            url: "https://docs.spring.io/spring-kafka/reference/",
-          },
-          {
-            name: "Kafka Spring",
-            url: "https://www.baeldung.com/spring-kafka",
+            url: "https://youtu.be/NWLwGtkBrkQ",
           },
         ],
       },
@@ -1778,10 +1435,6 @@ export const roadmapData: Week[] = [
           {
             name: "RabbitMQ Docs",
             url: "https://www.rabbitmq.com/documentation.html",
-          },
-          {
-            name: "Spring AMQP",
-            url: "https://docs.spring.io/spring-amqp/reference/",
           },
         ],
       },
@@ -1805,38 +1458,12 @@ export const roadmapData: Week[] = [
             url: "https://spring.io/projects/spring-cloud",
           },
           {
-            name: "Microservices (Baeldung)",
-            url: "https://www.baeldung.com/spring-boot-microservices",
-          },
-        ],
-      },
-      {
-        id: "w35-t2",
-        title: "Eureka and Gateway",
-        description: "Service registry and routing",
-        resources: [
-          {
-            name: "Eureka Server",
-            url: "https://cloud.spring.io/spring-cloud-netflix/reference/html/",
+            name: "Microservices",
+            url: "https://dev.to/isaactony/building-your-first-microservice-system-with-spring-boot-a-beginners-guide-3b28",
           },
           {
-            name: "Spring Cloud Gateway",
-            url: "https://docs.spring.io/spring-cloud-gateway/reference/",
-          },
-        ],
-      },
-      {
-        id: "w35-t3",
-        title: "Distributed Tracing",
-        description: "Zipkin and Sleuth for observability",
-        resources: [
-          {
-            name: "Spring Cloud Sleuth",
-            url: "https://docs.spring.io/spring-cloud-sleuth/reference/",
-          },
-          {
-            name: "Distributed Tracing",
-            url: "https://www.baeldung.com/spring-cloud-sleuth-single-application",
+            name: "Expense Tracker Project",
+            url: "https://youtu.be/RtMezvuOKE0",
           },
         ],
       },
@@ -1849,6 +1476,10 @@ export const getTotalTopics = () => {
 };
 
 export const getTotalWeeks = () => roadmapData.length;
+
+export const getTotalStages = () => {
+  return new Set(roadmapData.map((week) => week.level)).size;
+};
 
 export const getTopicsByLevel = (
   level: "beginner" | "intermediate" | "advanced",

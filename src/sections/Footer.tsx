@@ -9,6 +9,8 @@ export function Footer() {
   const quickLinks = [
     { label: 'Home', action: () => navigate('/') },
     { label: 'Roadmap', action: () => navigate('/roadmap') },
+    { label: 'Learn Hub', action: () => navigate('/learn') },
+    { label: 'Resources', action: () => navigate('/resources') },
   ];
 
   const resources = [

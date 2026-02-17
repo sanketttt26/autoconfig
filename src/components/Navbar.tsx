@@ -21,6 +21,7 @@ export function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
   const currentPage = location.pathname === '/roadmap' ? 'roadmap' : 'home';
+  const isLearnPage = location.pathname === '/learn';
 
   useEffect(() => {
     setMounted(true);
@@ -103,11 +104,10 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed inset-x-0 top-0 z-50 border-b backdrop-blur-xl transition-all duration-300 ${
-        isScrolled
+      className={`fixed inset-x-0 top-0 z-50 border-b backdrop-blur-xl transition-all duration-300 ${isScrolled
           ? 'border-[color:var(--line-soft)] bg-[color:var(--nav-bg)] shadow-[0_1px_0_rgb(27_31_36_/_0.06)]'
           : 'border-transparent bg-transparent'
-      }`}
+        }`}
     >
       <div className="container-custom">
         <div className="flex h-16 items-center justify-between gap-4 md:h-20">
@@ -136,11 +136,10 @@ export function Navbar() {
                   key={link.section}
                   onClick={() => handleSectionClick(link.section)}
                   type="button"
-                  className={`nav-link ${
-                    currentPage === 'home' && activeSection === link.section
+                  className={`nav-link ${currentPage === 'home' && activeSection === link.section
                       ? 'nav-link-active'
                       : ''
-                  }`}
+                    }`}
                 >
                   {link.label}
                 </button>
@@ -183,11 +182,10 @@ export function Navbar() {
                   key={link.section}
                   onClick={() => handleSectionClick(link.section)}
                   type="button"
-                  className={`block w-full rounded-xl px-3 py-2.5 text-left text-sm font-semibold transition-colors ${
-                    currentPage === 'home' && activeSection === link.section
+                  className={`block w-full rounded-xl px-3 py-2.5 text-left text-sm font-semibold transition-colors ${currentPage === 'home' && activeSection === link.section
                       ? 'bg-[var(--brand-soft)] text-[var(--brand-strong)]'
                       : 'text-body hover:bg-[var(--bg-panel-muted)] hover:text-strong'
-                  }`}
+                    }`}
                 >
                   {link.label}
                 </button>

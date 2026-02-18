@@ -7,6 +7,8 @@ import { Features } from './sections/Features';
 import { RoadmapPreview } from './sections/RoadmapPreview';
 import { FAQ } from './sections/FAQ';
 import { Footer } from './sections/Footer';
+import { LearnPage } from './pages/LearnPage';
+import { ResourcesPage } from './pages/ResourcesPage';
 import { RoadmapPage } from './pages/RoadmapPage';
 
 interface HomePageProps {
@@ -59,11 +61,13 @@ function App() {
               path="/"
               element={
                 <HomePage
-                  onGetStarted={() => navigate('/roadmap')}
+                  onGetStarted={() => navigate('/learn')}
                   onViewRoadmap={() => navigate('/roadmap')}
                 />
               }
             />
+            <Route path="/learn" element={<LearnPage />} />
+            <Route path="/resources" element={<ResourcesPage />} />
             <Route path="/roadmap" element={<RoadmapPage />} />
           </Routes>
         </main>

@@ -16,15 +16,10 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState<HomeSection>('home');
-  const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   const location = useLocation();
   const navigate = useNavigate();
-  const currentPage = location.pathname === '/roadmap' ? 'roadmap' : 'home';
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,7 +32,7 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
-    if (currentPage !== 'home') {
+    if (!isHomePage) {
       return;
     }
 
@@ -70,7 +65,7 @@ export function Navbar() {
     sections.forEach((section) => observer.observe(section));
 
     return () => observer.disconnect();
-  }, [currentPage]);
+  }, [isHomePage]);
 
   const scrollToSection = (section: HomeSection) => {
     const element = document.getElementById(section);
@@ -85,7 +80,7 @@ export function Navbar() {
   const handleSectionClick = (section: HomeSection) => {
     setIsMobileMenuOpen(false);
 
-    if (currentPage === 'home') {
+    if (isHomePage) {
       scrollToSection(section);
       return;
     }
@@ -98,23 +93,22 @@ export function Navbar() {
     navigate('/');
   };
 
-  const isDark = mounted && theme === 'dark';
+  const isDark = theme === 'dark';
   const toggleTheme = () => setTheme(isDark ? 'light' : 'dark');
 
   return (
     <nav
-      className={`fixed inset-x-0 top-0 z-50 border-b backdrop-blur-xl transition-all duration-300 ${
-        isScrolled
+      className={`fixed inset-x-0 top-0 z-50 border-b backdrop-blur-xl transition-all duration-300 ${isScrolled
           ? 'border-[color:var(--line-soft)] bg-[color:var(--nav-bg)] shadow-[0_1px_0_rgb(27_31_36_/_0.06)]'
           : 'border-transparent bg-transparent'
-      }`}
+        }`}
     >
       <div className="container-custom">
         <div className="flex h-16 items-center justify-between gap-4 md:h-20">
           <button
             onClick={handleBrandClick}
             type="button"
-            className="group flex items-center gap-3"
+            className="group flex items-center gap-3 md:flex-1"
             aria-label="Go to home"
           >
             <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-[color:var(--line-soft)] bg-[color:var(--brand-mark-bg)] shadow-xs">
@@ -129,26 +123,25 @@ export function Navbar() {
             </span>
           </button>
 
-          <div className="hidden flex-1 items-center justify-center md:flex">
-            <div className="flex items-center gap-6 lg:gap-9">
-              {navLinks.map((link) => (
-                <button
-                  key={link.section}
-                  onClick={() => handleSectionClick(link.section)}
-                  type="button"
-                  className={`nav-link ${
-                    currentPage === 'home' && activeSection === link.section
-                      ? 'nav-link-active'
-                      : ''
-                  }`}
-                >
-                  {link.label}
-                </button>
-              ))}
+          {isHomePage && (
+            <div className="hidden items-center justify-center md:flex">
+              <div className="flex items-center gap-6 lg:gap-9">
+                {navLinks.map((link) => (
+                  <button
+                    key={link.section}
+                    onClick={() => handleSectionClick(link.section)}
+                    type="button"
+                    className={`nav-link ${activeSection === link.section ? 'nav-link-active' : ''
+                      }`}
+                  >
+                    {link.label}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
-          <div className="hidden md:block">
+          <div className="hidden items-center justify-end md:flex md:flex-1">
             <button
               onClick={toggleTheme}
               type="button"
@@ -159,22 +152,35 @@ export function Navbar() {
             </button>
           </div>
 
-          <button
-            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-            type="button"
-            className="icon-button h-10 w-10 md:hidden"
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? (
-              <X className="h-5 w-5" />
-            ) : (
-              <Menu className="h-5 w-5" />
+          <div className="ml-auto flex items-center gap-2 md:hidden">
+            <button
+              onClick={toggleTheme}
+              type="button"
+              className="icon-button h-10 w-10"
+              aria-label="Toggle theme"
+            >
+              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            </button>
+
+            {isHomePage && (
+              <button
+                onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+                type="button"
+                className="icon-button h-10 w-10"
+                aria-label="Toggle menu"
+              >
+                {isMobileMenuOpen ? (
+                  <X className="h-5 w-5" />
+                ) : (
+                  <Menu className="h-5 w-5" />
+                )}
+              </button>
             )}
-          </button>
+          </div>
         </div>
       </div>
 
-      {isMobileMenuOpen && (
+      {isHomePage && isMobileMenuOpen && (
         <div className="animate-fade-in border-t border-[color:var(--line-soft)] bg-[color:var(--nav-bg)] md:hidden">
           <div className="container-custom py-4">
             <div className="space-y-1">
@@ -183,24 +189,15 @@ export function Navbar() {
                   key={link.section}
                   onClick={() => handleSectionClick(link.section)}
                   type="button"
-                  className={`block w-full rounded-xl px-3 py-2.5 text-left text-sm font-semibold transition-colors ${
-                    currentPage === 'home' && activeSection === link.section
+                  className={`block w-full rounded-xl px-3 py-2.5 text-left text-sm font-semibold transition-colors ${activeSection === link.section
                       ? 'bg-[var(--brand-soft)] text-[var(--brand-strong)]'
                       : 'text-body hover:bg-[var(--bg-panel-muted)] hover:text-strong'
-                  }`}
+                    }`}
                 >
                   {link.label}
                 </button>
               ))}
             </div>
-            <button
-              onClick={toggleTheme}
-              type="button"
-              className="btn-secondary mt-4 w-full justify-center gap-2 px-4 py-2.5 text-sm"
-            >
-              {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-              {isDark ? 'Light mode' : 'Dark mode'}
-            </button>
           </div>
         </div>
       )}

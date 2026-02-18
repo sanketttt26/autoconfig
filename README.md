@@ -6,7 +6,10 @@ Interactive React UI for a structured Spring Boot learning roadmap with curated 
 
 - Landing page with Hero, Features, Roadmap Preview, and FAQ sections
 - Dedicated `/roadmap` page with stage and type filters (`beginner`, `intermediate`, `advanced`; `core`, `optional`)
+- Dedicated `/resources` page with curated YouTube videos and playlists
 - Topic search across titles and descriptions
+- Resource search and category filtering
+- Resource cards with YouTube thumbnails for videos, playlist thumbnail fallback ("Thumbnail unavailable"), and hidden duration for playlists
 - Progress checkboxes and starred topics
 - Expand/collapse all modules
 - Persistent view state and progress in `localStorage`
@@ -29,9 +32,10 @@ Interactive React UI for a structured Spring Boot learning roadmap with curated 
 ```text
 src/
   components/      Reusable UI and navigation components
+  constants/       Resources dataset (videos/playlists)
   data/            Roadmap dataset and helper functions
   hooks/           Shared hooks
-  pages/           Route-level pages (Roadmap page)
+  pages/           Route-level pages (Roadmap, Learn, Resources)
   sections/        Landing page sections
   static/          Static assets (logo)
 ```
@@ -67,6 +71,7 @@ Open `http://localhost:5173`.
 ## Data and persistence
 
 - Roadmap content lives in `src/data/roadmap.ts`.
+- Resource video and playlist content lives in `src/constants/resourceVideos.ts`.
 - Progress and view preferences are stored in `localStorage` keys: `autoconfig-site-progress`, `autoconfig-site-starred`, `autoconfig-site-roadmap-view`.
 
 ## Build output and deployment
@@ -78,3 +83,4 @@ Open `http://localhost:5173`.
 
 - This repository is frontend-only.
 - The roadmap content is curated and can be updated by editing `src/data/roadmap.ts`.
+- Resources content can be updated by editing `src/constants/resourceVideos.ts`.

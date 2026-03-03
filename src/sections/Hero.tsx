@@ -1,5 +1,4 @@
-import { ArrowRight, BookOpen, Code2, Rocket } from 'lucide-react';
-import { getTotalStages, getTotalTopics, getTotalWeeks } from '../data/roadmap';
+import { ArrowRight } from 'lucide-react';
 import roadmapPreviewDark from '../static/thum_black.png';
 import roadmapPreviewLight from '../static/thum_white.png';
 
@@ -8,28 +7,6 @@ interface HeroProps {
 }
 
 export function Hero({ onGetStarted }: HeroProps) {
-  const totalStages = getTotalStages();
-  const totalTopics = getTotalTopics();
-  const totalWeeks = getTotalWeeks();
-
-  const stats = [
-    {
-      icon: BookOpen,
-      label: `${totalStages} ${totalStages === 1 ? 'stage' : 'stages'}`,
-      description: 'Progress through clear learning stages',
-    },
-    {
-      icon: Code2,
-      label: `${totalTopics} ${totalTopics === 1 ? 'topic' : 'topics'}`,
-      description: 'Hands-on backend concepts and projects',
-    },
-    {
-      icon: Rocket,
-      label: `${totalWeeks} ${totalWeeks === 1 ? 'module' : 'modules'}`,
-      description: 'From Java basics to microservices delivery',
-    },
-  ];
-
   return (
     <section className="relative overflow-hidden pb-14 pt-10 sm:pb-24 sm:pt-20">
       <div className="pointer-events-none absolute inset-0">
@@ -45,36 +22,38 @@ export function Hero({ onGetStarted }: HeroProps) {
       </div>
 
       <div className="container-custom relative">
-        <div className="mx-auto max-w-4xl text-center">
-          <span className="kicker animate-fade-in-up">
-            <span className="h-2 w-2 rounded-full bg-[var(--text-strong)]" />
-            2026 Learning Track
-          </span>
+        <div className="text-center">
+          <div className="mx-auto max-w-4xl">
+            <span className="kicker animate-fade-in-up">
+              <span className="h-2 w-2 rounded-full bg-[var(--text-strong)]" />
+              2026 Learning Track
+            </span>
 
-          <h1 className="animate-fade-in-up stagger-1 mt-5 font-display text-3xl leading-tight text-strong sm:mt-6 sm:text-5xl md:text-6xl">
-            From Tutorials to Production:{' '}
-            <span className="text-gradient-brand">
-              <br />
-              Ship
-              Real Spring Boot Systems
-            </span>,{' '}
-            Faster.
-          </h1>
+            <h1 className="animate-fade-in-up stagger-1 mt-5 font-display text-3xl leading-tight text-strong sm:mt-6 sm:text-5xl md:text-6xl">
+              From Tutorials to Production:{' '}
+              <span className="text-gradient-brand">
+                <br />
+                Ship
+                Real Spring Boot Systems
+              </span>,{' '}
+              Faster.
+            </h1>
 
-          <p className="animate-fade-in-up stagger-2 section-copy mx-auto mt-4 max-w-2xl text-base sm:mt-6 sm:text-lg">
-            Follow high-signal milestones, build portfolio-grade backend projects,
-            and finish each phase with work you can demo, deploy, and defend in interviews.
-          </p>
+            <p className="animate-fade-in-up stagger-2 section-copy mx-auto mt-4 max-w-2xl text-base sm:mt-6 sm:text-lg">
+              Follow high-signal milestones, build portfolio-grade backend projects,
+              and finish each phase with work you can demo, deploy, and defend in interviews.
+            </p>
 
-          <div className="animate-fade-in-up stagger-3 mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <button onClick={onGetStarted} className="btn-primary group px-6 py-3 text-base sm:px-8 sm:py-3.5">
-              Start Learning
-              <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
-            </button>
+            <div className="animate-fade-in-up stagger-3 mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <button onClick={onGetStarted} className="btn-primary group px-6 py-3 text-base sm:px-8 sm:py-3.5">
+                Start Learning
+                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+              </button>
+            </div>
           </div>
 
-          <div className="animate-fade-in-up stagger-4 mx-auto mt-8 w-full max-w-5xl sm:mt-10">
-            <div className="overflow-hidden rounded-2xl border border-[color:var(--line-soft)] bg-[var(--bg-panel)] shadow-[var(--shadow-md)]">
+          <div className="animate-fade-in-up stagger-4 mx-auto mt-8 w-full max-w-6xl sm:mt-10">
+            <div className="overflow-hidden rounded-lg border border-[color:var(--line-soft)] bg-[var(--bg-panel)] shadow-[var(--shadow-md)] sm:rounded-2xl">
               <img
                 src={roadmapPreviewLight}
                 alt="Roadmap interface preview in light mode"
@@ -90,20 +69,7 @@ export function Hero({ onGetStarted }: HeroProps) {
             </div>
           </div>
 
-          <div className="animate-fade-in-up stagger-5 mt-10 grid grid-cols-1 gap-3 sm:mt-14 sm:gap-4 sm:grid-cols-3">
-            {stats.map((stat) => (
-              <article
-                key={stat.label}
-                className="surface-card surface-card-hover p-5 text-left"
-              >
-                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-[color:var(--line-soft)] bg-[var(--brand-soft)]">
-                  <stat.icon className="h-5 w-5 text-[var(--brand)]" />
-                </div>
-                <p className="text-xl font-bold text-strong">{stat.label}</p>
-                <p className="mt-1 text-sm text-body">{stat.description}</p>
-              </article>
-            ))}
-          </div>
+         
 
           <div className="mx-auto mt-12 h-px w-full max-w-3xl soft-divider" />
         </div>

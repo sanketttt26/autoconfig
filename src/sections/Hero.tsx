@@ -31,7 +31,7 @@ export function Hero({ onGetStarted }: HeroProps) {
   ];
 
   return (
-    <section className="relative overflow-hidden pb-20 pt-14 sm:pb-24 sm:pt-20">
+    <section className="relative overflow-hidden pb-14 pt-10 sm:pb-24 sm:pt-20">
       <div className="pointer-events-none absolute inset-0">
         <div
           className="animate-pulse-slow absolute left-1/2 top-0 h-[500px] w-[780px] -translate-x-1/2 rounded-full"
@@ -51,7 +51,7 @@ export function Hero({ onGetStarted }: HeroProps) {
             2026 Learning Track
           </span>
 
-          <h1 className="animate-fade-in-up stagger-1 mt-6 font-display text-4xl leading-tight text-strong sm:text-5xl md:text-6xl">
+          <h1 className="animate-fade-in-up stagger-1 mt-5 font-display text-3xl leading-tight text-strong sm:mt-6 sm:text-5xl md:text-6xl">
             From Tutorials to Production:{' '}
             <span className="text-gradient-brand">
               <br />
@@ -61,22 +61,19 @@ export function Hero({ onGetStarted }: HeroProps) {
             Faster.
           </h1>
 
-          <p className="animate-fade-in-up stagger-2 section-copy mx-auto mt-6 max-w-2xl text-lg">
+          <p className="animate-fade-in-up stagger-2 section-copy mx-auto mt-4 max-w-2xl text-base sm:mt-6 sm:text-lg">
             Follow high-signal milestones, build portfolio-grade backend projects,
             and finish each phase with work you can demo, deploy, and defend in interviews.
           </p>
 
           <div className="animate-fade-in-up stagger-3 mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <button
-              onClick={onGetStarted}
-              className="btn-primary group px-8 py-3.5 text-base"
-            >
+            <button onClick={onGetStarted} className="btn-primary group px-6 py-3 text-base sm:px-8 sm:py-3.5">
               Start Learning
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
             </button>
           </div>
 
-          <div className="animate-fade-in-up stagger-4 mx-auto mt-10 w-full max-w-5xl">
+          <div className="animate-fade-in-up stagger-4 mx-auto mt-8 w-full max-w-5xl sm:mt-10">
             <div className="overflow-hidden rounded-2xl border border-[color:var(--line-soft)] bg-[var(--bg-panel)] shadow-[var(--shadow-md)]">
               <img
                 src={roadmapPreviewLight}
@@ -93,7 +90,7 @@ export function Hero({ onGetStarted }: HeroProps) {
             </div>
           </div>
 
-          <div className="animate-fade-in-up stagger-5 mt-14 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <div className="animate-fade-in-up stagger-5 mt-10 grid grid-cols-1 gap-3 sm:mt-14 sm:gap-4 sm:grid-cols-3">
             {stats.map((stat) => (
               <article
                 key={stat.label}

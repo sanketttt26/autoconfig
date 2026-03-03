@@ -104,11 +104,11 @@ export function Navbar() {
         }`}
     >
       <div className="container-custom">
-        <div className="flex h-16 items-center justify-between gap-4 md:h-20">
+        <div className="flex h-14 items-center justify-between gap-3 md:h-20">
           <button
             onClick={handleBrandClick}
             type="button"
-            className="group flex items-center gap-3 md:flex-1"
+            className="group min-w-0 flex items-center gap-2.5 md:flex-1"
             aria-label="Go to home"
           >
             <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-[color:var(--line-soft)] bg-[color:var(--brand-mark-bg)] shadow-xs">
@@ -118,7 +118,7 @@ export function Navbar() {
                 className="h-6 w-6 object-contain dark:invert"
               />
             </span>
-            <span className="text-lg font-semibold tracking-tight text-strong sm:text-xl">
+            <span className="truncate text-base font-semibold tracking-tight text-strong sm:text-xl">
               autoconfig.site
             </span>
           </button>
@@ -152,7 +152,7 @@ export function Navbar() {
             </button>
           </div>
 
-          <div className="ml-auto flex items-center gap-2 md:hidden">
+          <div className="ml-auto flex items-center gap-1.5 md:hidden">
             <button
               onClick={toggleTheme}
               type="button"

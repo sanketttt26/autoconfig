@@ -1,5 +1,3 @@
-@import url('https://cdn.jsdelivr.net/npm/@fontsource-variable/mona-sans@5.2.6/index.min.css');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -376,11 +374,11 @@ a {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
-  padding-inline: clamp(1rem, 8vw, 11.25rem);
+  padding-inline: clamp(1rem, 6vw, 11.25rem);
 }
 
 .section-padding {
-  padding-block: clamp(3.5rem, 7vw, 6rem);
+  padding-block: clamp(2.75rem, 7vw, 6rem);
 }
 
 .section-intro {
@@ -700,7 +698,30 @@ a {
 
 @media (max-width: 768px) {
   .container-custom {
-    padding-inline: 1.25rem;
+    padding-inline: 1rem;
+  }
+
+  .section-intro {
+    margin-bottom: 2.25rem;
+  }
+
+  .app-shell::before,
+  .app-shell::after {
+    filter: blur(52px);
+  }
+}
+
+@media (max-width: 420px) {
+  .container-custom {
+    padding-inline: 0.9rem;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .surface-card-hover:hover,
+  .btn-primary:hover,
+  .icon-button:hover {
+    transform: none;
   }
 }
 

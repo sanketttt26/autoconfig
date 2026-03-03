@@ -6,7 +6,7 @@ const levels = [
   {
     id: 'beginner',
     title: 'Beginner',
-    subtitle: 'Stage 1 · Foundations',
+    subtitle: 'Stage 1 - Foundations',
     description: 'Master the fundamentals of Java, Spring Boot, and database basics.',
     icon: Code2,
     tagClass: 'tag-green',
@@ -16,7 +16,7 @@ const levels = [
   {
     id: 'intermediate',
     title: 'Intermediate',
-    subtitle: 'Stage 2 · Core Systems',
+    subtitle: 'Stage 2 - Core Systems',
     description: 'Deep dive into Spring Security, testing, WebSockets, and reactive programming.',
     icon: Database,
     tagClass: 'tag-blue',
@@ -26,7 +26,7 @@ const levels = [
   {
     id: 'advanced',
     title: 'Advanced',
-    subtitle: 'Stage 3 · Advanced',
+    subtitle: 'Stage 3 - Advanced',
     description: 'Build microservices with Docker, Kubernetes, Kafka, and cloud deployment.',
     icon: Server,
     tagClass: 'tag-violet',
@@ -51,11 +51,11 @@ export function RoadmapPreview({ onViewRoadmap }: RoadmapPreviewProps) {
           description="Move from core fundamentals to distributed systems through a phased path that keeps every step focused and measurable."
         />
 
-        <div className="mb-12 grid grid-cols-1 gap-6 lg:grid-cols-3">
+        <div className="mb-10 grid grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-3">
           {levels.map((level) => (
             <article
               key={level.id}
-              className="surface-card surface-card-hover relative h-full overflow-hidden p-6"
+              className="surface-card surface-card-hover relative h-full overflow-hidden p-5 sm:p-6"
             >
               <div className="absolute inset-x-0 top-0 h-1 bg-[var(--brand-soft)]" />
 

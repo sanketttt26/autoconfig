@@ -302,11 +302,11 @@ export function RoadmapPage() {
   };
 
   return (
-    <div className="pb-16 pt-8 md:pt-10">
+    <div className="pb-16 pt-5 md:pt-10">
       <div className="container-custom">
-        <header className="mb-8">
+        <header className="mb-6 md:mb-8">
           <span className="kicker">Interactive Roadmap</span>
-          <h1 className="mt-4 font-display text-3xl text-strong sm:text-4xl">
+          <h1 className="mt-3 font-display text-2xl text-strong sm:text-4xl">
             autoconfig.site
           </h1>
           <p className="mt-3 max-w-3xl text-body">
@@ -315,9 +315,9 @@ export function RoadmapPage() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-4">
-          <aside className="lg:col-span-1">
-            <div className="sticky top-24 space-y-4">
+        <div className="grid grid-cols-1 gap-5 lg:grid-cols-4 lg:gap-6">
+          <aside className="order-2 lg:order-1 lg:col-span-1">
+            <div className="space-y-4 lg:sticky lg:top-24">
               <div className="surface-card p-5">
                 <div className="mb-5 flex items-center gap-3">
                   <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[color:var(--line-soft)] bg-[var(--brand-soft)]">
@@ -403,8 +403,8 @@ export function RoadmapPage() {
             </div>
           </aside>
 
-          <section className="space-y-4 lg:col-span-3">
-            <div className="flex flex-col gap-3 sm:flex-row">
+          <section className="order-1 space-y-4 lg:order-2 lg:col-span-3">
+            <div className="flex flex-col gap-2.5 sm:flex-row sm:gap-3">
               <div className="relative flex-1">
                 <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" />
                 <input
@@ -415,16 +415,16 @@ export function RoadmapPage() {
                   className="search-input py-3 pl-10 pr-4 text-sm"
                 />
               </div>
-              <div className="flex gap-2">
+              <div className="grid grid-cols-2 gap-2 sm:flex">
                 <button
                   onClick={expandAll}
-                  className="btn-secondary px-4 py-3 text-sm whitespace-nowrap"
+                  className="btn-secondary px-3 py-2.5 text-xs whitespace-nowrap sm:px-4 sm:py-3 sm:text-sm"
                 >
                   Expand All
                 </button>
                 <button
                   onClick={collapseAll}
-                  className="btn-secondary px-4 py-3 text-sm whitespace-nowrap"
+                  className="btn-secondary px-3 py-2.5 text-xs whitespace-nowrap sm:px-4 sm:py-3 sm:text-sm"
                 >
                   Collapse All
                 </button>
@@ -521,7 +521,7 @@ export function RoadmapPage() {
                     <article key={week.id} className="surface-card overflow-hidden">
                       <button
                         onClick={() => toggleWeek(week.id)}
-                        className="flex w-full items-center gap-3 p-4 text-left transition-colors hover:bg-[var(--bg-panel-soft)]"
+                        className="flex w-full items-center gap-2.5 p-3.5 text-left transition-colors hover:bg-[var(--bg-panel-soft)] sm:gap-3 sm:p-4"
                       >
                         {isExpanded ? (
                           <ChevronUp className="h-5 w-5 text-muted" />
@@ -558,7 +558,7 @@ export function RoadmapPage() {
                             />
                           </div>
                         </div>
-                        <span className="w-11 text-right text-sm font-semibold text-muted">
+                        <span className="hidden w-11 text-right text-sm font-semibold text-muted min-[421px]:inline">
                           {progressPercent}%
                         </span>
                       </button>

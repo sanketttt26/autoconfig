@@ -97,9 +97,9 @@ export function ResourcesPage() {
           description="Curated YouTube videos for Java, Spring Boot, testing, and backend engineering."
         />
 
-        <div className="surface-card mx-auto mt-8 max-w-7xl p-5 md:p-8">
-          <div className="flex items-center justify-between gap-4 border-b border-[color:var(--line-soft)] pb-5 lg:gap-5">
-            <label className="relative min-w-0 basis-4/5">
+        <div className="surface-card mx-auto mt-6 max-w-7xl p-4 md:mt-8 md:p-8">
+          <div className="flex flex-col items-stretch justify-between gap-3 border-b border-[color:var(--line-soft)] pb-4 sm:flex-row sm:items-center sm:gap-4 sm:pb-5 lg:gap-5">
+            <label className="relative min-w-0 sm:basis-4/5">
               <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" />
               <input
                 value={query}
@@ -110,7 +110,7 @@ export function ResourcesPage() {
               />
             </label>
 
-            <div className="min-w-0 basis-2/5">
+            <div className="min-w-0 sm:basis-2/5">
               <Select
                 value={category}
                 onValueChange={(value) => setCategory(value as (typeof categories)[number])}

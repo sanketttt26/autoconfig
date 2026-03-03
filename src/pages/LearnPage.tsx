@@ -18,7 +18,7 @@ export function LearnPage() {
           {/* Roadmap Card */}
           <button
             onClick={() => navigate('/roadmap')}
-            className="surface-card surface-card-hover group flex flex-col items-start p-8 text-left transition-all hover:border-[var(--brand-strong)]"
+            className="surface-card surface-card-hover group flex flex-col items-start p-5 text-left transition-all hover:border-[var(--brand-strong)] sm:p-8"
           >
             <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-[color:var(--line-soft)] bg-[var(--brand-soft)] group-hover:scale-110 transition-transform duration-300">
               <Map className="h-7 w-7 text-[var(--brand)]" />
@@ -40,7 +40,7 @@ export function LearnPage() {
           {/* Resources Card */}
           <button
             onClick={() => navigate('/resources')}
-            className="surface-card surface-card-hover group flex flex-col items-start p-8 text-left transition-all hover:border-[var(--brand-strong)]"
+            className="surface-card surface-card-hover group flex flex-col items-start p-5 text-left transition-all hover:border-[var(--brand-strong)] sm:p-8"
           >
             <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-[color:var(--line-soft)] bg-[var(--brand-soft)] group-hover:scale-110 transition-transform duration-300">
               <Library className="h-7 w-7 text-[var(--brand)]" />

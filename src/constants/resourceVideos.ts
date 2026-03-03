@@ -1,3 +1,5 @@
+import springPreview from "../static/spring.jpg";
+
 export type VideoCategory =
   | "Java Fundamentals"
   | "OOP"
@@ -13,6 +15,7 @@ export interface ResourceVideo {
   duration?: string;
   youtubeUrl: string;
   recommended?: boolean;
+  previewImage?: string;
 }
 
 export const RESOURCE_VIDEOS: ResourceVideo[] = [
@@ -23,12 +26,13 @@ export const RESOURCE_VIDEOS: ResourceVideo[] = [
     youtubeUrl:
       "https://youtube.com/playlist?list=PLEocw3gLFc8W25hvuYb6EERd3F0aZjUQF&si=d3GWkbvTzuMot9BF",
     recommended: true,
+    previewImage: springPreview,
   },
   {
-    title: "Object Oriented Programming in Java",
+    title: "Java course for free",
     channel: "Bro Code",
-    category: "OOP",
-    duration: "3h",
+    category: "Java Fundamentals",
+    duration: "12h",
     youtubeUrl: "https://www.youtube.com/watch?v=xk4_1vDrzzo",
     recommended: true,
   },

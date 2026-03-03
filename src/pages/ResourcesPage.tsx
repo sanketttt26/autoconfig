@@ -13,6 +13,7 @@ import {
   type ResourceVideo,
   type VideoCategory,
 } from '../constants/resourceVideos';
+import defaultResourcePreview from '../static/thum_white.png';
 
 const categories: Array<'All Categories' | VideoCategory> = [
   'All Categories',
@@ -159,6 +160,8 @@ export function ResourcesPage() {
 function VideoCard({ video }: { video: ResourceVideo }) {
   const thumbnail = getYouTubeThumbnail(video.youtubeUrl);
   const isPlaylist = Boolean(getYouTubePlaylistId(video.youtubeUrl));
+  const fallbackThumbnail = video.previewImage ?? defaultResourcePreview;
+  const [previewSrc, setPreviewSrc] = useState(thumbnail || fallbackThumbnail);
 
   return (
     <a
@@ -168,19 +171,17 @@ function VideoCard({ video }: { video: ResourceVideo }) {
       className="surface-card surface-card-hover group overflow-hidden"
     >
       <div className="relative aspect-video border-b border-[color:var(--line-soft)] bg-[var(--bg-panel-muted)]">
-        {thumbnail ? (
-          <img
-            src={thumbnail}
-            alt={`${video.title} thumbnail`}
-            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
-            loading="lazy"
-          />
-        ) : (
-          <div className="flex h-full w-full items-center justify-center text-sm font-semibold text-muted">
-            Thumbnail unavailable
-          </div>
-        )}
-
+        <img
+          src={previewSrc}
+          alt={`${video.title} thumbnail`}
+          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+          loading="lazy"
+          onError={() => {
+            if (previewSrc !== fallbackThumbnail) {
+              setPreviewSrc(fallbackThumbnail);
+            }
+          }}
+        />
       </div>
 
       <div className="p-4">

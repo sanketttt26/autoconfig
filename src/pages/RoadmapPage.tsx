@@ -110,6 +110,14 @@ const parseStoredViewState = (raw: string | null): Partial<RoadmapViewState> => 
   }
 };
 
+const getModuleTopicHint = (week: Week): string => {
+  const previewTopics = week.topics.slice(0, 3).map((topic) => topic.title);
+  if (week.topics.length <= 3) {
+    return previewTopics.join(', ');
+  }
+  return `${previewTopics.join(', ')} +${week.topics.length - 3} more`;
+};
+
 export function RoadmapPage() {
   const savedViewState = useMemo(
     () => parseStoredViewState(localStorage.getItem(STORAGE_KEYS.viewState)),
@@ -524,7 +532,7 @@ export function RoadmapPage() {
                         <div className="min-w-0 flex-1">
                           <div className="mb-1 flex flex-wrap items-center gap-2">
                             <span className="font-semibold text-strong">
-                              {stageLabels[week.level]} · Module {stageIndexMap[week.id]}
+                              {stageLabels[week.level]} - Module {stageIndexMap[week.id]}
                             </span>
                             <span
                               className={`rounded-full px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide ${
@@ -534,6 +542,9 @@ export function RoadmapPage() {
                               {week.type}
                             </span>
                           </div>
+                          <p className="truncate text-xs text-body">
+                            Includes: {getModuleTopicHint(week)}
+                          </p>
                           <p className="text-sm text-muted">
                             {completedCount} of {week.topics.length} topics complete
                           </p>

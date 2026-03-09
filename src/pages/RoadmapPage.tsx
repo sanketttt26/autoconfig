@@ -316,7 +316,36 @@ export function RoadmapPage() {
         </header>
 
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-4 lg:gap-6">
-          <aside className="order-2 lg:order-1 lg:col-span-1">
+          <div className="order-1 lg:order-2 lg:col-span-3 lg:col-start-2">
+            <div className="flex flex-col gap-2.5 sm:flex-row sm:gap-3">
+              <div className="relative flex-1">
+                <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" />
+                <input
+                  type="text"
+                  placeholder="Search topics, concepts, or descriptions..."
+                  value={searchQuery}
+                  onChange={(event) => setSearchQuery(event.target.value)}
+                  className="search-input py-3 pl-10 pr-4 text-sm"
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-2 sm:flex">
+                <button
+                  onClick={expandAll}
+                  className="btn-secondary px-3 py-2.5 text-xs whitespace-nowrap sm:px-4 sm:py-3 sm:text-sm"
+                >
+                  Expand All
+                </button>
+                <button
+                  onClick={collapseAll}
+                  className="btn-secondary px-3 py-2.5 text-xs whitespace-nowrap sm:px-4 sm:py-3 sm:text-sm"
+                >
+                  Collapse All
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <aside className="order-2 lg:order-1 lg:col-span-1 lg:row-span-2">
             <div className="space-y-4 lg:sticky lg:top-24">
               <div className="surface-card p-5">
                 <div className="mb-5 flex items-center gap-3">
@@ -403,34 +432,7 @@ export function RoadmapPage() {
             </div>
           </aside>
 
-          <section className="order-1 space-y-4 lg:order-2 lg:col-span-3">
-            <div className="flex flex-col gap-2.5 sm:flex-row sm:gap-3">
-              <div className="relative flex-1">
-                <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" />
-                <input
-                  type="text"
-                  placeholder="Search topics, concepts, or descriptions..."
-                  value={searchQuery}
-                  onChange={(event) => setSearchQuery(event.target.value)}
-                  className="search-input py-3 pl-10 pr-4 text-sm"
-                />
-              </div>
-              <div className="grid grid-cols-2 gap-2 sm:flex">
-                <button
-                  onClick={expandAll}
-                  className="btn-secondary px-3 py-2.5 text-xs whitespace-nowrap sm:px-4 sm:py-3 sm:text-sm"
-                >
-                  Expand All
-                </button>
-                <button
-                  onClick={collapseAll}
-                  className="btn-secondary px-3 py-2.5 text-xs whitespace-nowrap sm:px-4 sm:py-3 sm:text-sm"
-                >
-                  Collapse All
-                </button>
-              </div>
-            </div>
-
+          <section className="order-3 space-y-4 lg:order-3 lg:col-span-3 lg:col-start-2">
             {showTopicResults ? (
               <div className="space-y-3">
                 <p className="text-sm text-muted">
